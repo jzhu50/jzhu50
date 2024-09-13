@@ -1,9 +1,11 @@
+'''
 Michelle Zhu
 Boas
 SoftDev
 K04 -- random and selection
 2024-09-13
 time spent: 0.5
+'''
 
 import random
 
