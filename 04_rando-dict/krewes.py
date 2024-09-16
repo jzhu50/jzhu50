@@ -9,7 +9,21 @@ time spent: 0.5
 
 import random
 
-krewes = {3:[1,2,3],42:[1,2,3],888:[1,2,3]}
+krewes = {
+           4: [ 
+		'DUA','TAWAB','EVA','JACK','VICTOR','EVAN','JASON','COLYI','IVAN','TANZEEM',
+		'TAHMIM','STANLEY','LEON','NAOMI','NIA','ANASTASIA','JADY','BRIAN','JACOB',
+		'ALEX','CHONGTIAN','DANNY','MARCO','ABIDUR','ANKITA','ANDY','ETHAN','AMANDA',
+		'AIDAN','LINDA','QIANJUN','JIAYING','KISHI'
+		],
+           5: [ 
+                'ADITYA','MARGIE','RACHEL','ALEXANDER','ZIYAD','DANNY','ENDRIT','CADEN',
+                'VEDANT','SUHANA','KYLE','KEVIN','RAYMOND','CHRISTOPHER','JONATHAN','SASHA',
+                'NAFIYU','TIM','WILL','DANIEL','BENJAMIN','CLAIRE','CHLOE','STELLA','TRACY',
+                'JESSICA','JACKIE','WEN YUAN','YINWEI','TIFFANY','JAYDEN DANIEL','PRINCEDEN' 
+              ]
+         }
 
-selected_list = random.choice(krewes)
-print(selected_list)
+'random.choice() only works with lists, so convertion needed'
+
+print(random.choice(list(random.choice(list(krewes.values())))))
