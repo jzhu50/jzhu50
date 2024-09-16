@@ -24,6 +24,9 @@ krewes = {
               ]
          }
 
-'random.choice() only works with lists, so convertion needed'
+'random.choice() only works with lists, so convertion needed from dictionary items to list'
+'dictionaries are used to store data values in key:value pairs'
+'dictionary items can be referred to by using the key name'
+'dictionary items do now allow duplicates'
 
 print(random.choice(list(random.choice(list(krewes.values())))))
