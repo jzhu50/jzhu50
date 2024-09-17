@@ -29,3 +29,25 @@ def sum13(nums):
      i += 1
   return total
 
+def sum67(nums):
+  deliverable = 0
+  ignore = False
+  for i in nums:
+    if i == 6:
+      ignore = True
+    if not ignore:
+      deliverable += i
+    if i == 7 and ignore:
+      ignore = False
+  return deliverable
+
+def has22(nums):
+  hasTwos = False
+  for i in range(len(nums)-1):
+    if i != 0:
+      if nums[i] == 2 and (nums[i+1] == 2 or nums[i-1] == 2):
+        hasTwos = True
+    else:
+      if nums[i] == 2 and nums[i+1] == 2:
+        hasTwos = True
+  return hasTwos
