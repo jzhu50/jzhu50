@@ -7,12 +7,12 @@ K05 -- bitstream
 time spent: 0.5
 '''
 
-'''name = open("krewes.txt", "r")
-print(name.read())
-'''
-
-krewes = '04$$$jzhu50$$$mishy@@@05$$$qzhou50$$$zhou'
-
-print(krewes.split('$$$', 4))
+def makeRoster (filename):
+    data = open(filename).read()
+    tuples = data.rsplit("@@@")[;-1]
+    names = []
+    information = []
+    for i in range(len(tuples)):
+        
 
 
