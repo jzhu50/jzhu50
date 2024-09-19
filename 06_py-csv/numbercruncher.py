@@ -43,7 +43,7 @@ def occupations_dict(occupations_str):
         
 # print(occupations_dict(data))
 
-# select an occupation based on the percentage weights
+# select occupations 100 times based on the percentage weights
 def random_selection(occupations_info):
     # convert dict.keys() to list
     occupations = list(occupations_info.keys())
@@ -60,7 +60,7 @@ def random_selection(occupations_info):
 
 print(random_selection(occupations_dict(data)))
 
-# count the total numbers of occupation occurrences in random_selection
+# count total number of occupation occurrences in random_selection
 def count_total(occupations):
     times = {}
     for occupation in occupations:
