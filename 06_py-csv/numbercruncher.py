@@ -7,7 +7,7 @@ K06 -- numbercruncher
 time spent: 0.75
 '''
 
-'''a
+'''
 DISCO:
 1. str.split('') - splits string into list
 2. str.rsplit('', num) - splits from right to left
