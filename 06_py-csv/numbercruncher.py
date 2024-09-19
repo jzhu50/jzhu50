@@ -22,23 +22,23 @@ DISCO:
 import random
 
 data = open('occupations.csv').read() # data type: str
-data = data[20:] # remove headings
-data = data[:-11] # remove "total"
 # print(data)
 
 # create a dict containing occupation info
 def occupations_dict(occupations_str):
     records = occupations_str.split('\n') # list made by splitting occupations
-    records.pop(0) # remove index 0
+    records.pop(0)   # remove headings
+    records.pop(-1)  #  
+    records.pop(-1)
+    # print(records)
     occupations_info = {}
     
     for record in records:
         # check if the record is not empty
-        if record.strip(): # .strip() clears extra spaces or newlines
-            # split by the last comma in the string to avoid multiple commas cases
-            occupation, percentage = record.rsplit(',', 1) # splits string from the right side
-            # !!! dictionary_name[key_name] = values
-            occupations_info[occupation] = float(percentage) # convert str to float
+        # split by the last comma in the string to avoid multiple commas cases
+        occupation, percentage = record.rsplit(',', 1) # splits string from the right side
+        # !!! dictionary_name[key_name] = values
+        occupations_info[occupation] = float(percentage) # convert str to float
     return occupations_info
         
 # print(occupations_dict(data))
@@ -54,8 +54,22 @@ def random_selection(occupations_info):
     # k=__ indicates we want 1 occupation
     # result of random.choices(list, weights=__, k=__) is a list
     # so specify wanted element using [__]
-    random_occupation_percentage_list = random.choices(occupations, weights=percentages, k=1)
-    selected_occupation = random_occupation_percentage_list[0]
+    random_occupation_percentage_list = random.choices(occupations, weights=percentages, k=100)
+    selected_occupation = random_occupation_percentage_list[:100]
     return selected_occupation
 
-print(random_selection(occupations_dict(data)))
+#print(random_selection(occupations_dict(data)))
+
+def count_total(occupations):
+    times = {}
+    for occupation in occupations:
+        added = False
+        for i in times:
+            if i == occupation:
+                times[i] = times[i] + 1
+                added = True
+        if(not added):
+            times[occupation] = 1
+    return times
+
+print(count_total(random_selection(occupations_dict(data))))
