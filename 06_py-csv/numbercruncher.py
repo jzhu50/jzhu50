@@ -58,17 +58,15 @@ def random_selection(occupations_info):
     selected_occupation = random_occupation_percentage_list[:100]
     return selected_occupation
 
-#print(random_selection(occupations_dict(data)))
+print(random_selection(occupations_dict(data)))
 
+# count the total numbers of occupation occurrences in random_selection
 def count_total(occupations):
     times = {}
     for occupation in occupations:
-        added = False
-        for i in times:
-            if i == occupation:
-                times[i] = times[i] + 1
-                added = True
-        if(not added):
+        if occupation in times.keys():
+            times[occupation] += 1
+        else:
             times[occupation] = 1
     return times
 
