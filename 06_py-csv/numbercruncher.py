@@ -44,30 +44,32 @@ def occupations_dict(occupations_str):
 # print(occupations_dict(data))
 
 # select occupations 100 times based on the percentage weights
-def random_selection(occupations_info):
+def random_selection(occupations_info, num):
     # convert dict.keys() to list
     occupations = list(occupations_info.keys())
     # convert dict.values() to list
     percentages = list(occupations_info.values())
-    
+   
     # random.choices(list, weights=__, k=__)[__]
     # k=__ indicates we want 1 occupation
     # result of random.choices(list, weights=__, k=__) is a list
     # so specify wanted element using [__]
-    random_occupation_percentage_list = random.choices(occupations, weights=percentages, k=100)
-    selected_occupation = random_occupation_percentage_list[:100]
+    random_occupation_percentage_list = random.choices(occupations, weights=percentages, k=num)
+    selected_occupation = random_occupation_percentage_list[:num]
     return selected_occupation
 
-print(random_selection(occupations_dict(data)))
+print(random_selection(occupations_dict(data), 1))
 
-# count total number of occupation occurrences in random_selection
 def count_total(occupations):
     times = {}
     for occupation in occupations:
-        if occupation in times.keys():
-            times[occupation] += 1
-        else:
+        added = False
+        for i in times:
+            if i == occupation:
+                times[i] = times[i] + 1
+                added = True
+        if(not added):
             times[occupation] = 1
     return times
 
-print(count_total(random_selection(occupations_dict(data))))
+# print(count_total(random_selection(occupations_dict(data), 10000)))
