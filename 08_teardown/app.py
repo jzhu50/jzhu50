@@ -1,4 +1,11 @@
-# your heading here
+'''
+Michelle Zhu, Ryan Zhou, Linda Zheng
+Boas
+SoftDev
+K08 -- app.py
+2024-09-22
+time spent: 
+'''
 
 '''
 DISCO:
@@ -32,4 +39,4 @@ def hello_world():
 app.run()                                # Q5: Where have you seen similar constructs in other languages?
 
 
-
+hello_world()
