@@ -1,3 +1,9 @@
+# Michelle Zhu, Jacob Lukose, Abidur Rahman, Evan Chan
+# Maje_stic
+# SoftDev
+# 9/24/2024
+# Time spent: 0.5
+
 import random
 from flask import Flask
 
@@ -13,6 +19,7 @@ def occupations_dict():
     
     for record in records:
         occupation, percentage = record.rsplit(',', 1)
+        occupation = occupation.replace('"',' ') # get rid of quotation marks
         occupations_info[occupation] = float(percentage)
     return occupations_info
 
@@ -31,7 +38,13 @@ def occupation_chooser():
     roster = "Michelle Zhu, Jacob Lukose, Abidur Rahman, Evan Chan"
     occupation = random_selection(occupations_dict(), 1)[0]
     'the base language is HTML, so use <br> for line breaks'
-    return team_name + "<br>" + roster + "<br>" + occupation + "<br>" + str(occupations_dict())
+    format = f"""
+    <body>
+        <h1>{team_name}: {roster}</h1>
+        <p>Occupation: {occupation}</p>
+        {str(occupations_dict())}
+    """
+    return format
 
 if __name__ == "__main__":    # true if this file NOT imported
     app.debug = True          # enable auto-reload upon code change
