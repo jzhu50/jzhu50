@@ -34,3 +34,5 @@ path/to/myworkshop$ tree 11_flask-static
 [related](https://ukulelemagazine.com/lessons/uke-lesson-3-chords-and-the-truth-country-songwriting-legend-harlan-howard)  
 [related](https://en.wikipedia.org/wiki/Plain_text)  
 
+discoveries:
+When trying to access the file foo via http://localhost:5000/static/foo, it shows that Access to localhost was denied.
