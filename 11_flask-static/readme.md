@@ -1,38 +1,5 @@
-## K11: Some Things Never Change
-### Due: 2024-09-26r before class
+Question one- the one in foo. We predicted that it would show up as basic HTML text but it actually downloaded the file.
 
-Your Trio Mission:
+Question two- the one in foo.html. We predicted that it would print everything but most of the code was hidden by the <!-- and -->. This can be seen through the inspect screen.
 
-1. In a new directory in your workshop, save a copy of the demo for using flask to serve static files.
-1. As a team...
-  - Familiarize yourself with the app directory structure and the files' content.
-  - Note anything notable.
-  - Predict expected behaviors.
-  - Spin up your website on localhost and reconcile behavior with prediction.
-  - Record your notes in `readme` in app's root directory.
-1. Once your team has done this, compose and store another html file named `fixie.html` (containing some html to render your team name and roster) so that flask can serve it staticly.
-
-<br>
-
-DELIVERABLES:
-* Save to workshop as indicated.
-* Each teammate should submit matching sourcecode.
-
-```
-path/to/myworkshop$ tree 11_flask-static
-.
-├── app.py
-├── readme
-└── static
-    ├── foo
-    ├── foo.html
-    └── fixie.html
-```
-
-<br>
-
-[related](https://ukulelemagazine.com/lessons/uke-lesson-3-chords-and-the-truth-country-songwriting-legend-harlan-howard)  
-[related](https://en.wikipedia.org/wiki/Plain_text)  
-
-DISCO:
-When trying to access the file foo via http://localhost:5000/static/foo, it suas that access to localhost was denied.
+You can override the routes by setting it in the main function aka here. In here the second statment overrides the function and prints a random letter instead of the "Is this plaintext, through?".
