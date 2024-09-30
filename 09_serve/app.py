@@ -25,9 +25,10 @@ def occupations_dict():
 
 def table():
     occupations = occupations_dict()
-    head = "<table><tr><th>Job Class</th><th>Percentage></th><tr>"
+    head = "<table><tr><th>Job Class</th><th>Percentage</th><tr>"
+    body = ""
     for i in occupations:
-        body += "<tr><td>" + i + "</td><td>" + occupations + "</td></tr>"
+        body += "<tr><td>" + i + "</td><td>" + str(occupations[i]) + "</td></tr>"
     output = head + body + "</table>"
     return output
 
@@ -51,6 +52,7 @@ def occupation_chooser():
         <h1>{team_name}: {roster}</h1>
         <p>Occupation: {occupation}</p>
         {table()}
+    </body>
     """
     return format
 
