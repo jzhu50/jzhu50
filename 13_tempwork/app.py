@@ -4,7 +4,7 @@ ducky123
 SoftDev
 <K13> -- tempwork
 2024-09-30
-time sepnt:
+time sepnt: 0.5
 '''
 
 from flask import Flask, render_template
@@ -42,7 +42,7 @@ def random_selection(occupations_info, num):
 
 @app.route("/")
 def main():
-    return "head to / wdywtbwygp"
+    return "head to /wdywtbwygp"
 
 @app.route("/wdywtbwygp")
 def tmplt():
