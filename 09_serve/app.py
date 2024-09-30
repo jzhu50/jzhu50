@@ -23,6 +23,14 @@ def occupations_dict():
         occupations_info[occupation] = float(percentage)
     return occupations_info
 
+def table():
+    occupations = occupations_dict()
+    head = "<table><tr><th>Job Class</th><th>Percentage></th><tr>"
+    for i in occupations:
+        body += "<tr><td>" + i + "</td><td>" + occupations + "</td></tr>"
+    output = head + body + "</table>"
+    return output
+
 # select occupations 100 times based on the percentage weights
 def random_selection(occupations_info, num):
     occupations = list(occupations_info.keys())
@@ -42,7 +50,7 @@ def occupation_chooser():
     <body>
         <h1>{team_name}: {roster}</h1>
         <p>Occupation: {occupation}</p>
-        {str(occupations_dict())}
+        {table()}
     """
     return format
 
