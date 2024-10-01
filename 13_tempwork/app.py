@@ -8,10 +8,11 @@ time sepnt: 0.5
 '''
 
 from flask import Flask, render_template
+import random
 app = Flask(__name__)
 
 def occupations_dict():
-    occupations_str = open('occupations.csv').read()
+    occupations_str = open('data/occupations.csv').read()
     records = occupations_str.split('\n')
     records.pop(0)
     records.pop(-1) 
@@ -46,7 +47,7 @@ def main():
 
 @app.route("/wdywtbwygp")
 def tmplt():
-    return render_template("tablified.html", title = "13_combine", table = table(), occupation = random_selection(occupation_dict(),1))
+    return render_template("tablified.html", title = "13_combine", table = table(), occupation = random_selection(occupations_dict(),1))
 
 if __name__ == "__main__":
     app.debug = True
