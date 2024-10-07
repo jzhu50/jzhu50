@@ -22,9 +22,10 @@ def occupations_dict():
     occupations_info = {}
     
     for record in records:
-        occupation, percentage = record.rsplit(',', 1)
+        two, link = record.rsplit(',', 1)
+        occupation, percentage = two.rsplit(',', 1)
         occupation = occupation.replace('"',' ') # get rid of quotation marks
-        occupations_info[occupation] = float(percentage)
+        occupations_info[occupation] = float(percentage), float(link)
     return occupations_info
 
 def table():
@@ -32,7 +33,7 @@ def table():
     head = "<table><tr><th>Job Class</th><th>Percentage</th><th>Link</th><tr>"
     body = ""
     for i in occupations:
-        body += "<tr><td>" + i + "</td><td>" + str(occupations[i]) + "</td></tr>"
+        body += "<tr><td>" + i + "</td><td>" + str(occupations[i][0]) + "</td><td>" + str(occupations[i][0]) + "</td></tr>"
     output = head + body + "</table>"
     return output
 
