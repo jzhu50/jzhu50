@@ -13,6 +13,7 @@ app = Flask(__name__)
 
 def occupations_dict():
     occupations_str = open('data/occupations.csv').read()
+    print(occupations_str)
     records = occupations_str.split('\n')
     records.pop(0)
     records.pop(-1) 
@@ -28,7 +29,7 @@ def occupations_dict():
 
 def table():
     occupations = occupations_dict()
-    head = "<table><tr><th>Job Class</th><th>Percentage</th><tr>"
+    head = "<table><tr><th>Job Class</th><th>Percentage</th><th>Link</th><tr>"
     body = ""
     for i in occupations:
         body += "<tr><td>" + i + "</td><td>" + str(occupations[i]) + "</td></tr>"
