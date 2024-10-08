@@ -57,23 +57,24 @@ def disp_loginpage():
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
+    print(testmod0.goo()) # prints statements in terminal
     return render_template( 'login.html' )
 
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
+    #print("\n\n\n")
+    #print("***DIAG: this Flask obj ***")
+    #print(app)
+    #print("***DIAG: request obj ***")
+    #print(request)
+    #print("***DIAG: request.args ***")
+    #print(request.args)
     print("***DIAG: request.args['username']  ***")
     print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
+    #print("***DIAG: request.headers ***")
+    #print(request.headers)
+    return "Waaaa hooo HAAAH " + request.args['username'] + " " + testmod0.goo()  #response to a form submission
 
 
     

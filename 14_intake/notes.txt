@@ -9,22 +9,23 @@ DISCO:
 * authenticate() is triggered when the user submits the form in the login HTML file to the /auth URL.
 * testmod0.py gets printed in the terminal.
 * request.args['username'] returns the argument 'username'.
+* request.headers returns info about the system.
 -----------------------------------------------------------------------
 
 
 Q/C/C:
-* why does taking out the following lines of codes crash the site?
+* why do the following lines of codes crash the site when uncommented?
 print("***DIAG: request.args['username']  ***")
 print(request.args['username'])
-* 
-* 
+* What does the request dictionary do?
 -----------------------------------------------------------------------
 
 
 OTHER?
-* 
-* 
-* 
+* directory "__pycache__" was created in folder when running the program.
+* It seems like request.headers and request.args can't coexist?
+* print(testmod0.goo()) prints statements in terminal
+* we can get the return statement from goo() from testmod0 by incorporating the function into the return statement in app.py
 -----------------------------------------------------------------------
 
 
