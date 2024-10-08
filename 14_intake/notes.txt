@@ -1,14 +1,22 @@
-< your heading here >
+Michelle Zhu, Ryan Zhou, Linda Zheng
+Boas
+SoftDev
+K14 -- intake 
+2024-10-8
+time spent: 0.5
 
 DISCO:
-* 
-* 
+* authenticate() is triggered when the user submits the form in the login HTML file to the /auth URL.
+* testmod0.py gets printed in the terminal.
 * 
 -----------------------------------------------------------------------
 
 
 Q/C/C:
-* 
+* why does taking out the following lines of codes crash the site?
+print("***DIAG: request.args['username']  ***")
+print(request.args['username'])
+
 * 
 * 
 -----------------------------------------------------------------------
