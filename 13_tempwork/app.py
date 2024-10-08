@@ -13,7 +13,6 @@ app = Flask(__name__)
 
 def occupations_dict():
     occupations_str = open('data/occupations.csv').read()
-    print(occupations_str)
     records = occupations_str.split('\n')
     records.pop(0)
     records.pop(-1) 
@@ -24,16 +23,28 @@ def occupations_dict():
     for record in records:
         two, link = record.rsplit(',', 1)
         occupation, percentage = two.rsplit(',', 1)
-        occupation = occupation.replace('"',' ') # get rid of quotation marks
-        occupations_info[occupation] = float(percentage), float(link)
+        occupation = occupation.replace('"',' ')
+        occupations_info[occupation] = {
+            "percentage": float(percentage),
+            "link": link.strip()
+        }
     return occupations_info
 
 def table():
     occupations = occupations_dict()
     head = "<table><tr><th>Job Class</th><th>Percentage</th><th>Link</th><tr>"
     body = ""
-    for i in occupations:
-        body += "<tr><td>" + i + "</td><td>" + str(occupations[i][0]) + "</td><td>" + str(occupations[i][0]) + "</td></tr>"
+    
+    for occupation, data in occupations.items():
+        percentage = data["percentage"]
+        link = data["link"]
+        
+        body += (
+            f"<tr><td>{occupation}</td>"
+            f"<td>{percentage}%</td>"
+            f"<td><a href='{link}' target='_blank'>Link</a></td></tr>"
+        )
+        
     output = head + body + "</table>"
     return output
 
