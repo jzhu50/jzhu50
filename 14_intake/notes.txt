@@ -18,6 +18,7 @@ Q/C/C:
 print("***DIAG: request.args['username']  ***")
 print(request.args['username'])
 * What does the request dictionary do?
+* What does the directory __pycache__ do?
 -----------------------------------------------------------------------
 
 
