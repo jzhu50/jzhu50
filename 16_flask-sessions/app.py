@@ -8,6 +8,7 @@ time spent: 0.5
 '''
 
 #https://www.youtube.com/watch?v=dowTXbUi7Jo
+# use session for core assignment
 
 # import conventions:
 # list most general first (standard python library)
