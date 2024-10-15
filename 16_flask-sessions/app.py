@@ -43,8 +43,11 @@ def response():
 
 @app.route('/logout', methods=['GET'])
 def logout():
-    session.pop('username', None)
-    return redirect(url_for('login'))
+    if 'username' in session:
+        user = session['username']
+        session.pop('username', None)
+        return render_template('logout.html', username=user)
+    return redirect(url_for('response'))
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified

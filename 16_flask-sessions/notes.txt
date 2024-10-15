@@ -4,3 +4,10 @@ action="/auth": specifies where the form data will be sent when the form is subm
 The name attribute in name="username" defines the key that will be used to send this form data to the server.
 <input type="submit" name="sub1">:
 type="submit": This creates a button that submits the form when clicked.
+session['username'] = username: saves username to session.
+redirect(url_for('login')): redirects the webpage to /login.
+
+
+Q/C/C:
+What does app.secre_key = 'string' do?
+Is it necessary?
