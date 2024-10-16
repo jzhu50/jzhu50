@@ -1,0 +1,46 @@
+/*
+ Michelle Zhu, Ryan Zhou, Linda Zheng
+ Boas
+ K17 -- style-layer
+ 2024-10-15
+ time spent: 1
+ */
+
+html {
+    background-color: #707070;
+    margin: 15px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #808080;
+}
+
+header {
+    background-color: #b3b3b3;
+    text-align: center;
+    padding: 5px;
+    font-size: 40px;
+    color: white;
+}
+
+.left {
+    width: 30%;
+    float: left; /* Float the left section to the left */
+    padding-left: 10px;
+    padding-top: 0;
+}
+
+.left ul {
+    list-style-type: none; /* Removes bullets from list */
+    color: white;
+    padding: 0;
+}
+
+.right {
+    width: 60%;
+    float: left; /* Float the right section next to the left */
+    padding: 0;
+}
