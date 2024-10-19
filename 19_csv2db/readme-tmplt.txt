@@ -13,6 +13,6 @@ DISCOVERIES:
 QUESTIONS/COMMENTS/CONCERNS:
 ----------------------------------------------------
 Q: How can I check if a table already exists in the database?
-Q: 
-C: a comment or concern
+Q: What can we use this database for?
+C: I SMELL DANGER!
 ====================================================
