@@ -13,7 +13,7 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-#c.execute("CREATE TABLE roster (name TEXT, age INTERGER, id INTEGER)")
+c.execute("CREATE TABLE roster (name TEXT, age INTERGER, id INTEGER)")
 
 with open('students.csv', mode='r', newline='') as file:
     csv_reader = csv.DictReader(file) #reads csv file as an ordered dictionary
