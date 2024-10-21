@@ -14,7 +14,7 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-c.execute("CREATE TABLE roster (name TEXT, age INTERGER, id INTEGER)")
+#c.execute("CREATE TABLE roster (name TEXT, age INTERGER, id INTEGER)")
 
 with open('students.csv', mode='r', newline='') as file:
     csv_reader = csv.DictReader(file) #reads csv file as an ordered dictionary
@@ -25,7 +25,8 @@ with open('students.csv', mode='r', newline='') as file:
         id = (row['id'])
         command = "INSERT INTO roster (name, age, id) VALUES (?, ?, ?)" # test SQL stmt in sqlite3 shell, save as string
         c.execute(command, (name, age, id))    # run SQL statement
-
+#table = c.execute("select * from roster")
+#print(table)
 #==========================================================
 
 db.commit() #save changes

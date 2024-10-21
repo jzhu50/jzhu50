@@ -1,0 +1,16 @@
+#TARGET SHIP DATE: {yyyy-mm-dd}
+
+Design Document Specifications:
+
+    A list of program components with role of each specified. (e.g., a car engine is comprised of various components: carburetor, alternator, radiator, spark plugs, etc. Each must perform its role for the engine to do its overall job.)
+    Explanation of how each component relates to the others.
+        Component map visualizing relationships between components.
+    Database Organization (tables? Relationships b/t tables? etc.)
+    Site map for front end
+        Represent each page you envision for your site.
+        Show linkages conveying all possilbe pathways for a user traversing site.
+    A breakdown of the different tasks required to complete this project
+        Include assignments of each task to each group member
+    Append this line to your heading: TARGET SHIP DATE: {yyyy-mm-dd}
+    Amalgamate these components into a single PDF, store in designated location.
+
