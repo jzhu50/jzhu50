@@ -2,6 +2,7 @@
 #SoftDev
 #skeleton/stub :: SQLITE3 BASICS
 #10/20/2024
+#time spent: 1
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
