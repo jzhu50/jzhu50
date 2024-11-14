@@ -1,7 +1,7 @@
-# how-to :: DO THE THING
+# how-to :: BOOTSTRAP
 ---
 ## Overview
-Why we care, what this will allow us to do, etc...
+Bootstrap is a very useful CSS styling tool with prebuilt display functions (components, utilities, layout, etc.) that save developers the time to write intensive CSS codes.
 
 ### Estimated Time Cost: x.x hrs (round to nearest 0.1)
 
