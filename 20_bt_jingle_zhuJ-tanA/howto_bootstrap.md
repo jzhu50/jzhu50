@@ -11,11 +11,11 @@ Bootstrap is a very useful CSS styling tool with prebuilt display functions (com
 - Install Bootstrap via package manager or include via CDN (Content Delivery Network) inside html file
 
 ### Procedure:
-1. 
-- You can install via package manager:
+1. You can install via package manager:
 `$ npm install bootstrap@5.3.3`
 `$ gem install bootstrap -v 5.3.3`
-- Or include via CDN:
+
+Or include via CDN:
 ```
 <!doctype html>
 <html lang="en">
