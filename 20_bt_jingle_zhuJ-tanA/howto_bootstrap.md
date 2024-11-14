@@ -1,7 +1,7 @@
 # how-to :: BOOTSTRAP
 ---
 ## Overview
-Bootstrap is a very useful CSS styling tool with prebuilt display functions (components, utilities, layout, etc.) that save developers the time to write intensive CSS codes.
+Bootstrap is a very useful CSS styling tool with prebuilt display functions (components, utilities, layout, etc.) that save developers the time to write intensive CSS codes. This guide will demonstrate some core features of Bootstrap, including 
 
 ### Estimated Time Cost: 1 hr
 
@@ -15,7 +15,8 @@ Bootstrap is a very useful CSS styling tool with prebuilt display functions (com
 - You can install via package manager:
 `$ npm install bootstrap@5.3.3`
 `$ gem install bootstrap -v 5.3.3`
-- Or include via CDN:
+
+- Or include via CDN (Place the <link> tag in the <head>):
 ```
 <!doctype html>
 <html lang="en">
@@ -29,6 +30,12 @@ Bootstrap is a very useful CSS styling tool with prebuilt display functions (com
   </body>
 </html>
 ```
+- If you plan to use dropdowns, popovers, or tooltips, place the <script> tag for JavaScript bundle (including Popper for positioning dropdowns, poppers, and tooltips) before the closing </body>:
+```
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+```
+
 1. Step, with `inline code`, and/or...
 1. Step, with
     ```
