@@ -3,15 +3,32 @@
 ## Overview
 Bootstrap is a very useful CSS styling tool with prebuilt display functions (components, utilities, layout, etc.) that save developers the time to write intensive CSS codes.
 
-### Estimated Time Cost: x.x hrs (round to nearest 0.1)
+### Estimated Time Cost: 1 hr
 
 ### Prerequisites:
 
-- Something you should know beforehand...
-- Something you will need installed beforehand...
+- Create a html file
+- Install Bootstrap via package manager or include via CDN (Content Delivery Network) inside html file
 
 ### Procedure:
-1. Step blah blah blah, and/or...
+1. 
+- You can install via package manager:
+`$ npm install bootstrap@5.3.3`
+`$ gem install bootstrap -v 5.3.3`
+- Or include via CDN:
+```
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+  </body>
+</html>
+```
 1. Step, with `inline code`, and/or...
 1. Step, with
     ```
