@@ -148,7 +148,6 @@ Bootstrap is a very useful CSS styling tool with prebuilt display functions (com
     </form>
   ```
     
-
 ### Resources
 * [Bootstrap](https://getbootstrap.com)
  
