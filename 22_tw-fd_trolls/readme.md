@@ -1,6 +1,7 @@
 DISCO:
-1. Both Bootstrap and Tailwind use the <script> tag for their CDNs, while Foundation uses the <link> tag to import the CSS stylesheet.
-2. 
+1. Tailwind uses the <script> tag for CDN, while Bootstrap and Foundation use the <link> tag to import CSS stylesheets.
+2. Placeholders are nice features (light gray, default fonts)
+3. 
 
 QCC:
 
