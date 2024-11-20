@@ -1,6 +1,3 @@
-# Workshop
-name: Michelle Zhu
-
-class: software development
-
-period: 4
+### Michelle Zhu
+## Workshop
+# SoftDev 2024-2025
