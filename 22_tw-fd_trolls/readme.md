@@ -1,7 +1,11 @@
 Jingle: Michelle Zhu, Amanda Tan
+
 SoftDev
+
 K22: Testing On-Ramps
+
 2024-11-20
+
 
 DISCO:
 1. Tailwind uses the ```<script>``` tag for CDN, while Bootstrap and Foundation use the ```<link>``` tag to import CSS stylesheets.
