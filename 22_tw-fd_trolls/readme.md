@@ -11,7 +11,7 @@ K22: Testing On-Ramps
 ## QCC:
 1. Is there a reason why some styling tools prefer the ```<script>``` tag, while others prefer the ```<link>``` tag?
 2. We know that Bootstrap was originally developed and used by Twitter, how did Tailwind and Foundation come about?
-3. What does data-active-collapse="true" do in Foundation? Nothing changed when we removed it.
+3. What does ```data-active-collapse="true"``` do in Foundation? Nothing changed when we removed it.
 
 ### q0: 1
 
