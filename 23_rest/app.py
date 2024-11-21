@@ -1,3 +1,12 @@
+'''
+Michelle Zhu, Ivan Gontchar
+Dualbeans
+SoftDev
+K23 -- restful api
+2024-11-21
+time spent: 1
+'''
+
 from flask import Flask, render_template
 import urllib.request
 import json
@@ -30,7 +39,7 @@ def home():
     title = data.get("title", "Astronomy Picture of the Day")
     
     TNPG = "dualbeans"
-    roster = "Michelle, Ivan"
+    roster = "Michelle Zhu, Ivan Gontchar"
     
     return render_template("main.html",
                            team_name=TNPG, 
