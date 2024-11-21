@@ -29,11 +29,11 @@ def home():
     explanation = data.get("explanation")
     title = data.get("title", "Astronomy Picture of the Day")
     
-    TNPG = dualbeans
-    roster = Michelle, Ivan
+    TNPG = "dualbeans"
+    roster = "Michelle, Ivan"
     
     return render_template("main.html",
-                           team_name=team_name, 
+                           team_name=TNPG, 
                            roster=roster, 
                            title=title, 
                            image_url=image_url, 
