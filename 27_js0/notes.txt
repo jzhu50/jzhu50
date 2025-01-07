@@ -1,0 +1,9 @@
+Michelle Zhu
+SoftDev pd4
+K27 - Basic functions in JavaScript
+2025-01-06m
+
+Q/C/C: 
+- To link a JavaScript file to the HTML file, put the <script> tag in the HTML file.
+- It seems like we can’t test javascript functions on python. Is that why we need to test the functions in the console?
+- The results of the functions, written in the javascript file, aren’t automatically displayed on developer browser.
