@@ -8,27 +8,26 @@
 
 ;factorial:
 (define fact (lambda (n)
-               (if (= n 1)
-                   n
-                   (* n (fact (- n 1))))))
+    (if (= n 0)
+        1
+        (* n (fact (- n 1))))))
 
-;TEST CALLS
+;TEST CALLS;
 (fact 1) ;"...should be  1"
 (fact 2) ;"...should be  2"
 (fact 3) ;"...should be  6"
 (fact 4) ;"...should be  24"
 (fact 5) ;"...should be  120"
 
-;fib:
+;fib:;
 (define fib (lambda (n)
-              (if (< n 2)
-                  n
-                  (+ (fib (- n 1)) (fib (- n 2))))))
+    (if (<= n 1)
+        n
+        (+ (fib (- n 1)) (fib (- n 2))))))
 
-;TEST CALLS
+;TEST CALLS;
 (fib 0) ;"...should be  0"
 (fib 1) ;"...should be  1"
 (fib 2) ;"...should be  1"
 (fib 3) ;"...should be  2"
 (fib 4) ;"...should be  3"
-;
