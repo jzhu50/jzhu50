@@ -1,5 +1,5 @@
-//Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-//SoftDev pd0
+//Michelle Zhu
+//SoftDev pd4
 //K27 - Basic functions in JavaScript
 //2025-01-06m
 
@@ -7,11 +7,11 @@
 
 //factorial:
 
-//<your team's fact(n) implementation>
+var fact = function(n) { if ( n==1 ) { return n; } else { return n * fact(n-1); }
 
 //TEST CALLS
-// (writing here can facilitate EZer copy/pasting into dev console now and later...)
 
+(fact 1)
 
 //-----------------------------------------------------------------
 
