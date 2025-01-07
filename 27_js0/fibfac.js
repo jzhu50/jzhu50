@@ -21,8 +21,6 @@ fact (3) //"...should be  6"
 fact (4) //"...should be  24"
 fact (5) //"...should be  120"
 
-let fac = fact(1)
-
 //-----------------------------------------------------------------
 
 //fib:
@@ -40,11 +38,5 @@ fib (1) //"...should be  1"
 fib (2) //"...should be  1"
 fib (3) //"...should be  2"
 fib (4) //"...should be  3"
-
-let fib = fib(0)
-
-// Display the results in the HTML
-document.getElementById("fac").textContent = `Factorial of 0 is: ${fac}`;
-document.getElementById("fib").textContent = `Fibonacci of 0 is: ${fib}`;
 
 //=================================================================
