@@ -38,7 +38,7 @@ def home():
     explanation = data.get("explanation")
     title = data.get("title", "Astronomy Picture of the Day")
     
-    TNPG = "dualbeans"
+    TNPG = "Dualbeans"
     roster = "Michelle Zhu, Ivan Gontchar"
     
     return render_template("main.html",
