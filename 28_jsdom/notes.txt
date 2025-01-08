@@ -1,0 +1,12 @@
+Michelle Zhu
+SoftDev pd4
+K28 -- Manipulating the DOM
+2025-01-07t
+
+Q/C/C:
+- There are two ways (so far) to display JS content on webpage: 1) type document.GetElementsById('').textContent = '${}'; in the javascript file; 2) type the function and call it in console.
+- list.appendChild(newitem); adds a new element to the list
+- newitem.innerHTML = text; specifies the property of the content
+- alert(""); sends an alert message
+- document.querySelector("html").style.backgroundColor = "purple"; sets background color to purple
+- Two ways to define a function: 1) var __ = function(); 2) constructs __ = document.createElement();
