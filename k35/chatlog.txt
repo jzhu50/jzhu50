@@ -1,7 +1,7 @@
 # DD: Michelle Zhu, Mark Ma                           
 # Copilot CHAT?
 # 3/12/2025
-# Time spent: 0.5
+# Time spent: 1.5
 
 DMZ: Follow the instructions and make a program that adheres to the following requirements:  [pasted p00_wiki readme content].
 Copilot: 
@@ -564,14 +564,154 @@ Here are the contents for the HTML files:
 ```
 
 These templates provide a basic structure for your wiki web application. You can further enhance them by adding styles, scripts, and additional features as needed.
-DMZ:
-Copilot:
-DMZ:
-Copilot:
-DMZ:
-Copilot:
-DMZ:
-Copilot:
-DMZ:
-Copilot:
-DMZ:
+DMZ: Can you add more styling to make it visually appealing?
+Copilot: 
+I'll add more styling to the existing `home.css` file to make the website more visually appealing.
+
+Here is the enhanced CSS code:
+
+```css
+/* Form Header */
+h2 {
+    font-weight: 700;
+    color: #007bff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Navigation Buttons */
+.top-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.top-buttons a {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.top-buttons a:hover {
+  background-color: #0056b3;
+}
+
+/* User Info */
+.user-info {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Blog List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Blog Holder */
+.blog_holder {
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Post Styling */
+.blog_post {
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog_post a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blog_post a:hover {
+  text-decoration: underline;
+}
+
+.blog_post p {
+  margin: 10px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Form Styling */
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+/* Alert Styling */
+.alert {
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+```
+
+You can add this updated CSS code to your `home.css` file in the `static/css` directory. This code includes additional styling for headers, navigation buttons, user info, blog list, blog posts, forms, buttons, container, and alerts to enhance the visual appeal of your website. If you need any further adjustments or specific styles, please let me know!
