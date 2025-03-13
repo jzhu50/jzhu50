@@ -15,5 +15,7 @@ q0: How many tries did it take to "get it right?"
 - Around 7 tries for me.
 q1: Did you catch any errors? If so, how did you notice, and what did you do?
 - I haven't caught any errors yet.
-q2: Wouldn't it be cool if Copilot can directly make edits to the files on GitHub?
-q3: Is password security guaranteed by the use of hashed passwords? Do we need to use hash if we want to publish our websites online?
+q2: How similar or different is the bot's output to that of your past self / old team?
+- Honestly, the outputs are very similar in both their structures and content.
+q3: Wouldn't it be cool if Copilot can directly make edits to the files on GitHub?
+q4: Is password security guaranteed by the use of hashed passwords? Do we need to use hash if we want to publish our websites online?
