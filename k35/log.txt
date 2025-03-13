@@ -4,14 +4,16 @@
 # Time spent: 1.5
 
 DISCO:
+- When my partner and I first told it to write __init__.py, it imported a python library "Flask-SQLAlchemy"
 - For some reason Copilot had a difficult time retrieving the readme file even after I provided the path and the permanent link to p00 repo, so I manually pasted the content in readme to the chat
-- 
+- On the register page it creates, it asks the user for their email, username, and password. However, on the login page it creates, it only asks for username and password
+- When I told it to include authentication in __init__.py, it imported the library "werkzeug.security" and used hash for password
 
 Q/C/C:
 some areas of interest...
 q0: How many tries did it take to "get it right?"
-- Around 5 tries for me.
+- Around 7 tries for me.
 q1: Did you catch any errors? If so, how did you notice, and what did you do?
 - I haven't caught any errors yet.
 q2: Wouldn't it be cool if Copilot can directly make edits to the files on GitHub?
-- YES!
+q3: Is password security guaranteed by the use of hashed passwords? Do we need to use hash if we want to publish our websites online?

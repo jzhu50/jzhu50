@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
+from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 from datetime import datetime
 
@@ -59,10 +60,14 @@ def view_page(page_id):
 
 @app.route('/create', methods=['GET', 'POST'])
 def create_page():
+    if 'user_id' not in session:
+        flash('You need to be logged in to create a page.')
+        return redirect(url_for('login'))
+
     if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
-        author_id = 1  # Replace with current user ID
+        author_id = session['user_id']
         last_modified = datetime.utcnow().isoformat()
 
         conn = get_db_connection()
@@ -80,6 +85,10 @@ def create_page():
 
 @app.route('/edit/<int:page_id>', methods=['GET', 'POST'])
 def edit_page(page_id):
+    if 'user_id' not in session:
+        flash('You need to be logged in to edit a page.')
+        return redirect(url_for('login'))
+
     conn = get_db_connection()
     page = conn.execute('SELECT * FROM pages WHERE id = ?', (page_id,)).fetchone()
     if page is None:
@@ -104,6 +113,52 @@ def edit_page(page_id):
             return redirect(url_for('edit_page', page_id=page_id))
     conn.close()
     return render_template('edit_page.html', page=page)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        password_hash = generate_password_hash(password)
+
+        conn = get_db_connection()
+        try:
+            conn.execute('INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)',
+                         (username, email, password_hash))
+            conn.commit()
+            conn.close()
+            flash('Registration successful. Please login.')
+            return redirect(url_for('login'))
+        except sqlite3.Error as e:
+            flash('Error registering user: {}'.format(e))
+            conn.close()
+            return redirect(url_for('register'))
+    return render_template('register.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        conn = get_db_connection()
+        user = conn.execute('SELECT * FROM users WHERE username = ?', (username,)).fetchone()
+        conn.close()
+        if user and check_password_hash(user['password_hash'], password):
+            session['user_id'] = user['id']
+            flash('Login successful.')
+            return redirect(url_for('home'))
+        else:
+            flash('Invalid username or password.')
+            return redirect(url_for('login'))
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    flash('You have been logged out.')
+    return redirect(url_for('home'))
 
 # Run the app
 if __name__ == '__main__':
