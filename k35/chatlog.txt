@@ -1176,3 +1176,146 @@ if __name__ == '__main__':
 ```
 
 This updated `__init__.py` includes routes for user registration, login, and logout, with session management to handle user authentication.
+DMZ: Create as many CSS files as you need to make the website more visually appealing, leaning towards anime theme.
+Copilot:
+I will provide the CSS files for you. You can add them to your repository in the `k35/app/templates` directory.
+
+1. **anime-style.css**:
+```css
+/* Base styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #ff66b2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation menu */
+nav {
+    background-color: #ff99cc;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Main content */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Anime-themed buttons */
+button {
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff99cc;
+}
+
+/* Footer styling */
+footer {
+    background-color: #ff66b2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+```
+
+2. **anime-typography.css**:
+```css
+/* Anime-inspired typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pacifico', cursive;
+    color: #ff66b2;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Special text effects */
+.text-glow {
+    color: #ff66b2;
+    text-shadow: 0 0 8px #ff66b2, 0 0 16px #ff66b2, 0 0 24px #ff66b2;
+}
+
+.text-shadow {
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+```
+
+3. **anime-animations.css**:
+```css
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Applying animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Hover effects */
+.button-hover {
+    transition: transform 0.3s ease;
+}
+
+.button-hover:hover {
+    transform: scale(1.1);
+}
+```
+
+Add these CSS files to your repository and link them in your HTML files to apply the anime-themed styles. If you need more specific styles or additional files, please let me know.
