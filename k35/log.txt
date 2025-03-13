@@ -13,5 +13,5 @@ q0: How many tries did it take to "get it right?"
 - Around 5 tries for me.
 q1: Did you catch any errors? If so, how did you notice, and what did you do?
 - I haven't caught any errors yet.
-q2: 
-- 
+q2: Wouldn't it be cool if Copilot can directly make edits to the files on GitHub?
+- YES!

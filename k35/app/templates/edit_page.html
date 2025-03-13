@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Edit Page</h1>
-    <form method="POST">
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title" value="{{ page.title }}" required>
-        <br>
-        <label for="content">Content:</label>
-        <textarea name="content" id="content" required>{{ page.content }}</textarea>
-        <br>
-        <button type="submit">Update Page</button>
-    </form>
-    <a href="{{ url_for('view_page', page_id=page.id) }}">Cancel</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Wiki</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('create_page') }}">Create New Page</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h1>Edit Page</h1>
+        <form action="{{ url_for('edit_page', page_id=page.id) }}" method="POST">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{ page.title }}" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-control" id="content" name="content" rows="10" required>{{ page.content }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
