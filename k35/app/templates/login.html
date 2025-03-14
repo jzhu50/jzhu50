@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="anime-style.css">
-    <link rel="stylesheet" href="anime-typography.css">
-    <link rel="stylesheet" href="anime-animations.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff; /* Light blue for winter background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #5f9ea0; /* Cadet blue for navigation */
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 50px 0;
+        }
+        .btn-primary {
+            background-color: #4682b4; /* Steel blue for buttons */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #5f9ea0; /* Cadet blue for hover effect */
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">Wiki</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
