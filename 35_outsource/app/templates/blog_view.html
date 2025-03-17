@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ blog.title }}</h1>
+<h2>Entries</h2>
+<ul>
+  {% for entry in entries %}
+  <li>
+    <h3>{{ entry.title }}</h3>
+    <p>{{ entry.content }}</p>
+    <button onclick="location.href='{{ url_for('blog.edit_entry', blog_id=blog.id, entry_id=entry.id) }}'">
+      Edit Entry
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<button onclick="location.href='{{ url_for('blog.new_entry', blog_id=blog.id) }}'">
+  Add New Entry
+</button>
+{% endblock %}
